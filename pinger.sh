@@ -12,7 +12,7 @@ fi
 
 for (( i=0; i < 20; i++ )); do
   if curl -Is $1 | head -n1 | grep -q "200 OK"; then
-    echo "[$(date)] $1 responded with '200 OK' status after $i tries"
+    echo "[$(date)] $1 responded with '200 OK' status after $((i + 1)) tries"
     exit 0
   else
     sleep 4
