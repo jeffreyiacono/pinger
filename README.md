@@ -16,8 +16,16 @@ pausing 4 seconds in between each try).
   exit status of 1 and message of "failed" is returned if script is not able to
   get a 200 response from the supplied URL after 20 tries.
 
-You can clone the repo into `~/bin` and use it anywhere assuming `~/bin` is in
-your `PATH`.
+You can clone the repo into `~/src` and symlink to `~/bin` and use it anywhere:
+
+    $ cd ~/src
+    $ git clone https://github.com/jeffreyiacono/pinger.git
+    $ cd ~/bin
+    $ ln -s ~/src/pinger/pinger.sh pinger
+    $ pinger -h
+    # Usage: path/to/pinger [url]
+
+Just make sure `~/bin` is in your `PATH`.
 
 ## Why?
 
