@@ -29,5 +29,5 @@ for (( i=0; i < 20; i++ )); do
   fi
 done
 
-echo "FAILED"
+echo "failed"
 exit 1
