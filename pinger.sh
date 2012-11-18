@@ -17,9 +17,13 @@ elif [ $1 == '-v' ]; then
 fi
 
 for (( i=0; i < 20; i++ )); do
-  if curl -Is $1 | head -n1 | grep -q "200 OK"; then
+  http_header_response=$(curl -Is $1 | head -n1)
+  if echo $http_header_response | grep -q "200 OK"; then
     echo "[$(date)] $1 responded with '200 OK' status after $((i + 1)) tries"
     exit 0
+  elif echo $http_header_response | grep -q "301 Moved Permanently"; then
+    echo "permanently moved - supply new url"
+    exit 1
   else
     sleep 4
   fi
