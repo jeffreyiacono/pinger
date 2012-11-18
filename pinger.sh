@@ -5,7 +5,7 @@ function usage {
   echo "Usage: $0 [url]"
 }
 
-if [ $# != 1 ]; then
+if [[ $# != 1 || $1 == '-h' ]]; then
   usage
   exit 1
 fi
