@@ -1,13 +1,19 @@
 #!/bin/bash
 
 function usage {
-  echo "Error: must pass a url to ping."
   echo "Usage: $0 [url]"
 }
 
-if [[ $# != 1 || $1 == '-h' ]]; then
+if [ $# != 1 ]; then
+  echo "Error: must pass a url to ping."
   usage
   exit 1
+elif [ $1 == '-h' ]; then
+  usage
+  exit 0
+elif [ $1 == '-v' ]; then
+  echo "version 1.0"
+  exit 0
 fi
 
 for (( i=0; i < 20; i++ )); do
