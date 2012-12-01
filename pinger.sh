@@ -15,6 +15,9 @@
 #
 # exit status of 1 and message of "failed" is returned if script is not able to
 # get a 200 response from the supplied URL after 20 tries.
+
+set -e
+
 function usage {
   echo "Usage: $0 [url]"
 }
