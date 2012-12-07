@@ -33,6 +33,9 @@ visitors for a given period of time. As a result, a brave visitor will be
 greeted with a terrifying `500` error page, which is no good. So how do we solve
 this? Use `pinger` + `cron` to ensure your app is periodically reloaded.
 
+If you'd like to get an email notifications on failure, you can use [pinger
+notifier](https://github.com/jeffreyiacono/pinger-notifier).
+
 ## Contributing
 
 1. Fork it
