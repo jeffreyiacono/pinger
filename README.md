@@ -18,14 +18,12 @@ pausing 4 seconds in between each try).
 
 You can clone the repo into `~/src` and symlink to `~/bin` and use it anywhere:
 
-    $ cd ~/src
-    $ git clone https://github.com/jeffreyiacono/pinger.git
-    $ cd ~/bin
-    $ ln -s ~/src/pinger/pinger.sh pinger
+    $ git clone https://github.com/jeffreyiacono/pinger.git ~/src/pinger
+    $ ln -s ~/src/pinger/pinger.sh ~/bin/pinger
     $ pinger -h
     # Usage: path/to/pinger [url]
 
-Just make sure `~/bin` is in your `PATH`.
+And make sure `~/bin` is in your `PATH`.
 
 ## Why?
 
